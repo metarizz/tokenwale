@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+    <!-- Chosen Palette: Warm Neutrals & Soft Blue -->
+    <!-- Application Structure Plan: The SPA is designed with a "Privacy at a Glance" summary at the top, followed by a detailed, interactive accordion section. This structure was chosen to prioritize immediate user comprehension of key privacy facts, addressing the most common user questions first. The accordion then allows users to self-direct their exploration into specific topics without being overwhelmed by a long document, transforming a passive policy into an engaging, user-friendly tool. -->
+    <!-- Visualization & Content Choices: Report Info: Core Principles -> Goal: Inform/Summarize -> Viz/Method: "At a Glance" section using large text and Unicode icons for quick visual cues -> Interaction: Static -> Justification: Provides immediate, scannable answers to primary user concerns. Report Info: Detailed Policy Sections -> Goal: Organize/Inform -> Viz/Method: Interactive accordion -> Interaction: Click to expand/collapse content -> Justification: Breaks down complex information into manageable chunks, preventing a wall of text. Report Info: Data Transmission -> Goal: Reinforce -> Viz/Method: HTML/CSS diagram -> Interaction: Static -> Justification: A visual metaphor is more impactful for explaining the "no data leaves your device" concept. Library/Method: All visuals and layouts use HTML/CSS with Tailwind. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">TokenWale</h1>
+            <p class="text-lg text-slate-600 mt-2">Interactive Privacy Policy</p>
+            <p class="text-sm text-slate-500 mt-1">Last Updated: June 19, 2025</p>
+        </header>
+
+        <main>
+            <section id="at-a-glance" class="mb-12">
+                <h2 class="text-2xl font-bold text-center text-slate-900 mb-8">Privacy at a Glance</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <div class="text-4xl mb-3 text-red-500">🚫</div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">No Personal Data Collected</h3>
+                        <p class="text-slate-600 text-sm">We don't ask for or store your name, email, or any personal info.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <div class="text-4xl mb-3 text-blue-500">🆔</div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Anonymous ID Only</h3>
+                        <p class="text-slate-600 text-sm">The app uses a random, anonymous ID to function on your device.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+                        <div class="text-4xl mb-3 text-green-500">📱</div>
+                        <h3 class="text-lg font-semibold text-slate-800 mb-1">Data Stays On-Device</h3>
+                        <p class="text-slate-600 text-sm">Your app data and ID are never sent to our servers or any third party.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="details">
+                <h2 class="text-2xl font-bold text-center text-slate-900 mb-4">Explore the Details</h2>
+                <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">This section provides a complete overview of our privacy policy. Click on any topic below to expand it and learn more about how we protect your privacy.</p>
+
+                <div id="accordion-container" class="space-y-4">
+                    
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">What data do we collect?</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                                <p>The App is designed to operate without collecting any personally identifiable information (PII) from its users. We do not ask for your name, email address, location, or any other personal details.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">How does the app identify you?</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                                <p>Instead of collecting personal information, the App generates a unique, anonymous identifier ("User ID") locally on your device when you first use the App. This User ID is a random string of characters and cannot be used to identify you personally.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">How is the anonymous User ID used?</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                                <p>This generated User ID is used solely for the following purposes:</p>
+                                <ul>
+                                    <li><strong>Internal App Functionality:</strong> To distinguish your instance of the App from others, allowing the App to save your progress, settings, or preferences locally on your device.</li>
+                                    <li><strong>Analytics (Aggregated and Anonymous):</strong> If the App uses any analytics tools, they are configured to only record data associated with this anonymous User ID. This data is aggregated and cannot be traced back to you. For example, we might track the total number of times a feature is used, but never who used it.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">Is your data ever transmitted?</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                                <p>The generated User ID and any associated data (like local settings or anonymous analytics data) are <strong>not transmitted off your device to our servers or any third-party servers.</strong> All data related to your use of the App, identified by the generated User ID, remains exclusively on your device.</p>
+                                <div class="mt-6 p-6 bg-slate-100 rounded-lg flex items-center justify-center space-x-4 sm:space-x-8 w-full max-w-md mx-auto">
+                                    <div class="text-center">
+                                        <div class="text-5xl">📱</div>
+                                        <div class="text-sm font-semibold mt-2">Your Device</div>
+                                    </div>
+                                    <div class="text-4xl text-red-500 font-bold">✕</div>
+                                    <div class="text-center">
+                                        <div class="text-5xl">☁️</div>
+                                        <div class="text-sm font-semibold mt-2">Our Servers</div>
+                                    </div>
+                                     <div class="text-4xl text-red-500 font-bold">✕</div>
+                                    <div class="text-center">
+                                        <div class="text-5xl">🏢</div>
+                                        <div class="text-sm font-semibold mt-2">Third Parties</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">What we guarantee NOT to collect</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                                <p>We specifically do not collect, store, or transmit:</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">✓</span><span>Your name, email address, phone number, or physical address.</span></li>
+                                    <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">✓</span><span>Your precise geographic location.</span></li>
+                                    <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">✓</span><span>Any demographic information (age, gender, etc.).</span></li>
+                                    <li class="flex items-start"><span class="text-red-500 mr-3 mt-1">✓</span><span>Any information that could be used to identify you personally.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">Children's Privacy</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                                <p>Our App is not directed at children under the age of 13, and we do not knowingly collect any personal information from children under 13. Given our policy of not collecting any PII, this principle is inherently maintained.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">Changes to This Policy</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the App or on our website. You are advised to review this Privacy Policy periodically for any changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item bg-white border border-slate-200 rounded-lg shadow-sm">
+                        <button class="accordion-header w-full flex justify-between items-center text-left p-5">
+                            <span class="font-semibold text-slate-800 text-lg">Contact Us</span>
+                            <span class="accordion-icon text-2xl text-slate-500 transform transition-transform">⊕</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 pt-0 text-slate-600 prose max-w-none">
+                               <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+                               <p class="font-semibold text-blue-600">metarizzofficial@gmail.com</p>
+                               <p class="text-blue-600">[Your Website/Support Page URL (Optional)]</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-12 pt-8 border-t border-slate-200">
+            <p class="text-sm text-slate-500">&copy; 2025 TokenWale. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                const icon = item.querySelector('.accordion-icon');
+
+                header.addEventListener('click', () => {
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+                    if (isOpen) {
+                        content.style.maxHeight = '0px';
+                        icon.textContent = '⊕';
+                        icon.classList.remove('rotate-45');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.textContent = '⊖';
+                        icon.classList.add('rotate-45');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
